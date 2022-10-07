@@ -30,36 +30,26 @@
 #     json.dump(data, file)
 
 # Задание_4
-#
+
 import json
-data = {
+
+list = {
     111111: ("Elena", 20),
-    222222: ("Svetlana",22),
+    222222: ("Svetlana", 22),
     333333: ("Anna", 24),
     444444: ("Viktoria", 26),
-    555555: ("Olga",28)
+    555555: ("Olga", 28),
 }
 
-dict = {}
-a = []
-
-for key, value in data.items():
-    dict['id'] = key
-    dict["name"] = value[0]
-    dict["age"] = value[1]
-    a.append(dict)
-print(a)
-with open("../../data.json", "w") as file:
-     json.dump(data, file)
-
+with open("list.json", "w") as file:
+    json.dump(list, file)
 
 import csv
 
 with open("list.json", "r") as file:
     json_data = json.load(file)
-    print(json_data)
 
-with open("../../list.csv", "w", newline="") as file:
+with open("list.csv", "w", newline="") as file:
     writer = csv.writer(file)
     header = ["id", "name", "age", "phone"]
     writer.writerow(header)
@@ -68,8 +58,7 @@ with open("../../list.csv", "w", newline="") as file:
         id_i = i
         name = json_data.get(i)[0]
         age = json_data.get(i)[1]
-        phone = f"(+33){i}"
+        phone = f"+37529{i}"
 
         writer.writerow(
             (id_i, name, age, phone))
-
