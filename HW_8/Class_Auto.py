@@ -1,6 +1,6 @@
-from My_new_rep.Class_Auto.Auto import Auto
-from My_new_rep.Class_Auto.Truck import Truck
-from My_new_rep.Class_Auto.Car import Car
+from My_new_rep.HW_8.Auto import Auto
+from My_new_rep.HW_8.Truck import Truck
+from My_new_rep.HW_8.Car import Car
 
 auto = Auto('Peugeot', 10, '406')
 auto.move()

@@ -1,4 +1,4 @@
-from My_new_rep.Class_Auto.Auto import Auto
+from My_new_rep.HW_8.Auto import Auto
 
 class Car(Auto):
     def __init__(self, brand, age, mark, max_speed):
